@@ -1,0 +1,55 @@
+# --- GitHub Actions Workflow ---
+# This workflow automates the deployment of Azure Blob Storage
+# using 'theVaultScript.sh' script.
+
+
+name: Deploy Vault Storage
+
+on:
+  push:
+    branches:
+      - main # Trigger on push to the main branch
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions UI
+
+env:
+  # Set environment variables for the scripts.
+  RESOURCE_GROUP_NAME: theVaultRG
+  CONTAINER_NAME: TheVault
+
+jobs:
+  deploy-storage:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      # This step checks out your repository code into the runner's workspace.
+
+    - name: Azure Login
+      uses: azure/login@v2
+      with:
+        # Use OIDC for authentication (recommended and more secure)
+        # Ensure your Azure Service Principal is configured for Federated Credentials.
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        
+
+    - name: Give execute permissions to scripts
+      run: |
+        chmod +x theVaultScript.sh
+        chmod +x theVaultOperations.sh
+      # Ensure the scripts are executable before trying to run them.
+
+    - name: Run Vault Storage Creation Script
+      run: ./theVaultScript.sh
+      # This step executes the script to create the Azure resources.
+
+
+    - name: Upload Deployment Logs as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: azure-deployment-logs
+        path: storage_deployment.log
+      # Makes the deployment log available for download from the GitHub Actions run.
+
