@@ -52,4 +52,5 @@ jobs:
         name: azure-deployment-logs
         path: storage_deployment.log
       # Makes the deployment log available for download from the GitHub Actions run.
+      
 
