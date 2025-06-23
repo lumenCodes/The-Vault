@@ -19,6 +19,10 @@ env:
 jobs:
   deploy-storage:
     runs-on: ubuntu-latest # Use the latest Ubuntu runner
+    permissions:
+      id-token: write # Required for OpenID Connect (OIDC) to fetch federated token
+      contents: read # Allow checkout to read repository contents
+
 
     steps:
     - name: Checkout Repository
