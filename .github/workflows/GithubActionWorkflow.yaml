@@ -39,7 +39,7 @@ env:
 #         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         
       
-  jobs:
+jobs:
   deploy:
     runs-on: ubuntu-latest
 
