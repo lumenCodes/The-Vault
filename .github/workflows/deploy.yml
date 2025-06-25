@@ -29,16 +29,15 @@ jobs:
           chmod +x ./vaultcreationscript.sh
           ./vaultcreationscript.sh
 
-      - name: Run file manager script 
+      - name: Run file manager script (example upload)
         run: |
           chmod +x ./filemanager.sh
-          
           touch testfile.txt
           ./filemanager.sh upload testfile.txt testblob
 
       - name: Upload logs as artifact
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: script-logs
           path: |
