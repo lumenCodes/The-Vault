@@ -1,0 +1,43 @@
+2025-06-25 20:15:45 - Script started with args: 
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 20:15:52 - ERROR: Unknown command ''
+2025-06-25 20:20:23 - Script started with args: 
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 20:20:32 - ERROR: Unknown command ''
+2025-06-25 20:23:07 - Script started with args: C:UsersUSERPicturesScreenshotsScreenshot 2025-06-04 170824.png picture
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 20:23:13 - ERROR: Unknown command 'C:UsersUSERPicturesScreenshotsScreenshot'
+2025-06-25 20:23:41 - Script started with args: upload C:UsersUSERPicturesScreenshotsScreenshot 2025-06-04 170824.png picture
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 20:23:45 - ERROR: Invalid usage for upload.
+2025-06-25 20:25:28 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture
+ERROR: <urllib3.connection.HTTPSConnection object at 0x000001FA61C151F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+2025-06-25 20:25:35 - ERROR: Invalid usage for upload.
+2025-06-25 20:26:37 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+ERROR: <urllib3.connection.HTTPSConnection object at 0x0000017A0EE451F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+2025-06-25 20:26:44 - Uploading file 'C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png' as blob 'picture1'...
+ERROR: Invalid base64-encoded string: number of data characters (121) cannot be 1 more than a multiple of 4
+2025-06-25 20:28:12 - ERROR: Upload failed.
+2025-06-25 21:08:09 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 21:08:13 - Uploading file 'C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png' as blob 'picture1'...
+ERROR: incorrect usage: the given account key may be not valid.
+2025-06-25 21:09:43 - ERROR: Upload failed.
+2025-06-25 21:14:28 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+ERROR: Storage account 'vaultstoragemain6531' not found.
+2025-06-25 21:14:31 - ERROR: Failed to get storage account key. Check account name and login.
+2025-06-25 21:19:32 - Script started with args:
+ upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+2025-06-25 21:26:16 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+ERROR: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-06-25 21:26:31 - ERROR: Failed to get storage account key. Check account name and login.
+2025-06-25 21:27:48 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+2025-06-25 21:27:56 - Uploading file 'C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png' as blob 'picture1'...
+ERROR: The specified container does not exist.
+RequestId:1cd6164c-e01e-0059-7b0f-e6d27e000000
+Time:2025-06-25T20:28:04.1278652Z
+ErrorCode:ContainerNotFound
+2025-06-25 21:28:11 - ERROR: Upload failed.
+2025-06-25 21:30:42 - Script started with args: upload C:\Users\USER\Pictures\Screenshots\Screenshot 2025-06-04 170824.png picture1
+ERROR: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-06-25 21:31:09 - ERROR: Failed to get storage account key. Check account name and login.
